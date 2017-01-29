@@ -1,0 +1,33 @@
+import { OnDestroy, ApplicationRef } from '@angular/core';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { ToastConfig, ToastData } from './toastr-config';
+import { ToastrService } from './toastr-service';
+import { ToastRef } from './toast-injector';
+export declare class Toast implements OnDestroy {
+    private toastrService;
+    data: ToastData;
+    private toastRef;
+    private appRef;
+    toastId: number;
+    message: string | SafeHtml;
+    title: string;
+    toastType: string;
+    options: ToastConfig;
+    timeout: any;
+    removalTimeout: any;
+    width: number;
+    private intervalId;
+    private hideTime;
+    toastClasses: string;
+    state: string;
+    private onTap;
+    private sub;
+    constructor(toastrService: ToastrService, data: ToastData, toastRef: ToastRef<any>, appRef: ApplicationRef, sanitizer: DomSanitizer);
+    ngOnDestroy(): void;
+    activateToast(): void;
+    updateProgress(): void;
+    tapToast(): void;
+    remove(): void;
+    delayedHideToast(): void;
+    stickAround(): void;
+}
