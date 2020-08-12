@@ -33,7 +33,7 @@
     "@angular/router": "7.2.4",
     "@ctrl/ngx-github-buttons": "2.1.0",
     "bootstrap": "4.2.1",
-    "core-js": "2.6.4",
+    "core-js": "2.6.11",
     "lodash-es": "4.17.11",
     "rxjs": "6.4.0",
     "zone.js": "0.8.29"
